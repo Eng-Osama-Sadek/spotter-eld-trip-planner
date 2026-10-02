@@ -1,0 +1,1 @@
+{"$schema":"https://railway.app/railway.schema.json","build":{"builder":"NIXPACKS"},"deploy":{"startCommand":"python manage.py migrate --noinput && python manage.py load_fuel_data --limit 100 && gunicorn config.wsgi:application --bind 0.0.0.0:$PORT --workers 2 --timeout 120","restartPolicyType":"ON_FAILURE","restartPolicyMaxRetries":10}}
