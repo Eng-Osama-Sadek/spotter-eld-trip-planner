@@ -1,0 +1,16 @@
+[phases.setup]
+nixPkgs = ["python310", "gcc", "gfortran", "openssl", "postgresql", "libpq"]
+
+[phases.install]
+cmds = [
+  "cd backend && pip install --upgrade pip",
+  "cd backend && pip install -r requirements.txt"
+]
+
+[phases.build]
+cmds = [
+  "cd backend && python manage.py collectstatic --noinput || true"
+]
+
+[start]
+cmd = "cd backend && python manage.py migrate --noinput && python manage.py load_fuel_data --limit 100 && gunicorn config.wsgi:application --bind 0.0.0.0:$PORT --workers 2 --timeout 120"
