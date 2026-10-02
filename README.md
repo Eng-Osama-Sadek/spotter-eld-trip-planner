@@ -23,6 +23,38 @@
 | 🗺️ **Trip Planning API** | [/api/trips/plan/](https://spotter-eld-backend-production.up.railway.app/api/trips/plan/) | ✅ Live |
 | ⚙️ **Admin Panel** | [/admin/](https://spotter-eld-backend-production.up.railway.app/admin/) | ✅ Live |
 
+## 📸 Screenshots
+
+### 🎨 Frontend — Trip Planning with Map & ELD Logs
+
+![Frontend Demo](screenshots/01-frontend-map-and-logs.png)
+
+*Interactive map showing the route (blue: Chicago → St. Louis, green: St. Louis → Dallas) with FMCSA-compliant ELD daily log sheets generated automatically.*
+
+### 🚀 Backend — Live API Response
+
+![DRF Trip Response](screenshots/02-drf-trip-response.png)
+
+*POST /api/trips/plan/ returning full route geometry, fuel stops, and daily logs.*
+
+### 💚 API Health Check
+
+![API Health](screenshots/03-api-health.png)
+
+### 🗺️ FMCSA ELD Log Sheet (Detail)
+
+![ELD Log Sheet](screenshots/04-eld-log-sheet.png)
+
+### ☁️ Deployment on Railway
+
+![Railway](screenshots/05-railway-deployment.png)
+
+### ▲ Deployment on Vercel
+
+![Vercel](screenshots/06-vercel-deployment.png)
+
+---
+
 ### 🎬 Try it now
 
 1. Open **[spotter-eld-frontend-ten.vercel.app](https://spotter-eld-frontend-ten.vercel.app)**
